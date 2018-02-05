@@ -7,11 +7,24 @@
  | Description: The fastest and hardest to read Demo Code around! |
  -----------------------------------------------------------------*/
  
+ #define writeln(X) printf(X);
+ #define BEGIN {
+ #define END }
+ 
  #include <stdio.h>
  
  int main(void)
- {
- 	printf("Hello, World!\n");
+ BEGIN
+ 	writeln("Hello, World!\n");
  	
- 	return 0;
- }
+ 	#define one 0
+ 	#ifdef __APPLE__
+ 		#warning "Hey, I'm on a Mac!"
+ 	#endif
+ 	return ((((((((((((\
+ 	(((((\
+ 	(\
+ 	((((((((\
+ 	(((((one))))))))))\
+ 	)))))))))))))))))))));
+ END
