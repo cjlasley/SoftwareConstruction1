@@ -15,7 +15,18 @@
  
  int main(void)
  BEGIN
- 	writeln("Hello, World!\n");
+ 
+ const char* hello = "Hello, World!\n";
+ unsigned int hbytes = 15;
+ 
+ 	__asm__{
+ 		push dword hbytes
+		push dword hello
+		push dword 1
+
+		mov eax, 0x4
+		int 0x80
+ 	}
  	
  	#define one 0
  	#ifdef __APPLE__
